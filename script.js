@@ -32,13 +32,26 @@ function itensSelecionados(elemento, classe) {
     if (classe === "comida") {
         pedido[0] = elemento.querySelector("h3").innerHTML
         valor[0]  = Number(elemento.querySelector("h4").innerHTML.replace("R$ ", "").replace(",",".")).toFixed(2)
+        document.querySelector(".pedido-comida").innerHTML = pedido[0]
+        document.querySelector(".valor-comida").innerHTML  = valor[0].replace(".",",")
     } else if (classe === "bebida") {
         pedido[1] = elemento.querySelector("h3").innerHTML
         valor[1]  = Number(elemento.querySelector("h4").innerHTML.replace("R$ ", "").replace(",",".")).toFixed(2)
+        document.querySelector(".pedido-bebida").innerHTML = pedido[1]
+        document.querySelector(".valor-bebida").innerHTML  = valor[1].replace(".",",")
     } else if (classe === "sobremesa") {
         pedido[2] = elemento.querySelector("h3").innerHTML
         valor[2]  = Number(elemento.querySelector("h4").innerHTML.replace("R$ ", "").replace(",",".")).toFixed(2)
+        document.querySelector(".pedido-sobremesa").innerHTML = pedido[2]
+        document.querySelector(".valor-sobremesa").innerHTML  = valor[2].replace(".",",")
     }
+    // Calculando o valor total
+    let valorTotal = 0
+    for (let i = 0; i < valor.length; i++) {
+        valorTotal += Number(valor[i]);
+    }
+    document.querySelector(".valorTotal").innerHTML = valorTotal.toFixed(2).replace(".",",")
+
 }
 
 function selecionarClasse(elemento) {
@@ -67,3 +80,14 @@ function formatoBotaoComprar() {
     }
 
 }
+
+function finalizarPedido() {
+    if (document.querySelector(".bar-gray").classList.contains("fechar-pedido")) {
+        document.querySelector(".confirma-pedido").classList.remove("hidden")
+    }
+}
+
+function cancelarPedido() {
+    document.querySelector(".confirma-pedido").classList.add("hidden")
+}
+

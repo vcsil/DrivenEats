@@ -190,6 +190,94 @@ body {
 
 }
 
+.confirma-pedido {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirma-pedido-box {
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    width: 92%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.confirma-pedido-box > h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.confirma-pedido-box > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirma-pedido-box  p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    
+    color: #FFFFFF;
+    max-width: 80%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.confirma-pedido-box .textoTotal {
+    font-weight: 700;
+}
+
+.confirma-pedido-botoes {
+    margin-top: 26px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.confirma-pedido-botoes > .botao-confirma {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #50D074;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 100px;
+    width: 88%;
+    cursor: pointer;
+    animation: float 1s ease-in-out infinite;
+}
+
+.botao-cancela {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+
 .hidden {
     display: none;
 }

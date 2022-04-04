@@ -19,6 +19,7 @@
   </head>
 
   <body>
+
     <div class="header">
       <h1 class="titulo">DrivenEats</h1>
       <p>Sua comida em 6 minutos</p>
@@ -295,12 +296,46 @@
     </div>
 
     <div class="bottom-bar">
-      <div class="bar-gray">
+      <div class="bar-gray" onclick="finalizarPedido()">
         <p>
           Selecione os 3 itens <br />
           para fechar o pedido
         </p>
       </div>
+    </div>
+
+    <div class="confirma-pedido hidden">
+        <div class="confirma-pedido-box">
+            <h3>Confirme seu pedido</h3>
+            <br>
+            <div>
+                <p class="pedido-comida"></p>
+                <p class="valor-comida"></p>
+            </div>
+            <br>
+            <div>
+                <p class="pedido-bebida"></p>
+                <p class="valor-bebida"></p>
+            </div>
+            <br>
+            <div>
+                <p class="pedido-sobremesa"></p>
+                <p class="valor-sobremesa"></p>
+            </div>
+            <br>
+            <div>
+                <p class="textoTotal">Total</p>
+                <p class="valorTotal"></p>
+            </div>
+            <div class="confirma-pedido-botoes">
+                <div class="botao-confirma">
+                    Tudo certo, pode pedir!
+                </div>
+                <div class="botao-cancela" onclick="cancelarPedido()">
+                    Cancelar
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
