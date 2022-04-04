@@ -172,6 +172,24 @@ body {
     color: #FFFFFF;
 }
 
+.fechar-pedido{
+    background-color: #32B72F;
+    cursor: pointer;
+    animation: float 1s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.02);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
 .hidden {
     display: none;
 }
