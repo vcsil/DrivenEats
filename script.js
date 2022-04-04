@@ -131,7 +131,7 @@ function cancelarPedido() {
 function confirmaPedido() {
   const cliente = prompt("Qual é o seu nome?");
   const enderecoClient = prompt("Qual é o endereço de envio?");
-  const contato = "5562982639600"; //"5521990872413"
+  const contato = "5521990872413"; 
 
   let textoCodificado = encodeURIComponent(
     `Olá, gostaria de fazer o pedido:\n- Prato: ${pedido[0]}\n- Bebida: ${
