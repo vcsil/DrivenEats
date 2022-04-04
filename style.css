@@ -58,10 +58,12 @@
   .container-lista-items {
     overflow-x: scroll;
     margin-bottom: 30px;
+    -ms-overflow-style: none; /* Esconder scroll-bar IE and Edge */
+    scrollbar-width: none;    /* Firefox */
   }
   
   .container-lista-items::-webkit-scrollbar {
-    display: none;
+    display: none;      /* Chrome, Safari and Opera */
   }
   
   .lista-items {
