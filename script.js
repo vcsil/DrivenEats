@@ -1,7 +1,8 @@
 // Seleção dos elementos
  
-let pedido = ['','','']
-let valor  = [0,0,0]; 
+let pedido = ['','',''];
+let valor  = [0,0,0];
+let valorTotal = 0; 
 
 // Selecionando os itens e deixnado verde
 function selecionar(elemento, classe) {
@@ -46,10 +47,11 @@ function itensSelecionados(elemento, classe) {
         document.querySelector(".valor-sobremesa").innerHTML  = valor[2].replace(".",",")
     }
     // Calculando o valor total
-    let valorTotal = 0
+    let valorT = 0
     for (let i = 0; i < valor.length; i++) {
-        valorTotal += Number(valor[i]);
+        valorT += Number(valor[i]);
     }
+    valorTotal = valorT    
     document.querySelector(".valorTotal").innerHTML = valorTotal.toFixed(2).replace(".",",")
 
 }
@@ -91,3 +93,17 @@ function cancelarPedido() {
     document.querySelector(".confirma-pedido").classList.add("hidden")
 }
 
+function confirmaPedido() {
+    const cliente        = prompt("Qual é o seu nome?")
+    const enderecoClient = prompt("Qual é o endereço de envio?")
+    const contato        = "5562982639600"//"5521990872413"
+
+    let textoCodificado = encodeURIComponent(`Olá, gostaria de fazer o pedido:\n- Prato: ${pedido[0]}\n- Bebida: ${pedido[1]}\n- Sobremesa: ${pedido[2]}\nTotal: R$ ${valorTotal.toFixed(2)}\n\nNome: ${cliente}\nEndereço: ${enderecoClient}`)
+
+    let url = `https://wa.me/${contato}?text=${textoCodificado}`
+
+    console.log(url)
+
+    window.open(url)
+
+}
