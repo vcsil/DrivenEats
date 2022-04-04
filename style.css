@@ -52,6 +52,7 @@ body {
     line-height: 32px;
     letter-spacing: 0.018em;
     color: #333333;
+    margin-bottom: 12px;
 }
 
 .container-lista-items {
@@ -61,7 +62,7 @@ body {
 
 .lista-items {
     display: inline-flex;
-    gap: 0 10px;                /*VER*/
+    gap: 0 10px;
 }
 
 .alimento-box {
@@ -69,7 +70,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*gap: 8px;                   /*VER*/
     padding: 10px;
     background-color: white;
     border-radius: 9px;
@@ -99,6 +99,12 @@ body {
 .descricao > h3 {
     font-weight: bold;
     margin-bottom: 8px;
+    max-width: 121px;
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .descricao > p {
@@ -117,14 +123,16 @@ body {
     }
 
 .descricao > h4 {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
 
-
-.descricao > img {
+.sinalSelecionado {
     position: absolute;
     width: 15px;
     height: 15px;
     bottom: 5px;
     right: 5px;
 }
+
